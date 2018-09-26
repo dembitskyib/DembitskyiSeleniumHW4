@@ -1,4 +1,4 @@
-package parsers;
+package com.epam.lab.parsers;
 
 import java.io.IOException;
 

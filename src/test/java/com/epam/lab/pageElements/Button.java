@@ -1,4 +1,4 @@
-package pageElements;
+package com.epam.lab.pageElements;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

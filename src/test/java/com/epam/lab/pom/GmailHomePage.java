@@ -1,4 +1,4 @@
-package pom;
+package com.epam.lab.pom;
 
 import java.util.function.Function;
 
@@ -12,8 +12,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageElements.Button;
-import pageElements.CustomFieldDecorator;
+import com.epam.lab.pageElements.Button;
+import com.epam.lab.pageElements.CustomFieldDecorator;
+
 
 public class GmailHomePage {
 	private WebDriver driver;

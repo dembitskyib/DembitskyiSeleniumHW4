@@ -1,10 +1,9 @@
-package parsers;
+package com.epam.lab.parsers;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-
 public class PropertyParser {
 	private Properties properties;
 	private InputStream input;

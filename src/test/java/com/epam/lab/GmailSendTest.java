@@ -9,10 +9,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import parsers.PropertyParser;
-import parsers.XMLParser;
-import pom.GmailHomePage;
-import pom.GmailLoginPage;
+import com.epam.lab.parsers.PropertyParser;
+import com.epam.lab.parsers.XMLParser;
+import com.epam.lab.pom.GmailHomePage;
+import com.epam.lab.pom.GmailLoginPage;
 
 public class GmailSendTest {
 	private final String PROPERTIES_PATH = "src/test/resources/config.properties";

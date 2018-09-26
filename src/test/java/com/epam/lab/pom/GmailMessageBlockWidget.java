@@ -1,14 +1,15 @@
-package pom;
+package com.epam.lab.pom;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import pageElements.Button;
-import pageElements.CustomFieldDecorator;
-import pageElements.HiddenInput;
-import pageElements.TextInput;
+import com.epam.lab.pageElements.Button;
+import com.epam.lab.pageElements.CustomFieldDecorator;
+import com.epam.lab.pageElements.HiddenInput;
+import com.epam.lab.pageElements.TextInput;
+
 
 public class GmailMessageBlockWidget {
 	private WebDriver driver;

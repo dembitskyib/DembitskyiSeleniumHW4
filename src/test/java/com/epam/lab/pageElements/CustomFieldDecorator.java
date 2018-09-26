@@ -1,4 +1,5 @@
-package pageElements;
+package com.epam.lab.pageElements;
+
 
 import java.lang.reflect.Field;
 
