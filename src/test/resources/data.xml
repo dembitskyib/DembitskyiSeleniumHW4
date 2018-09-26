@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<pageNavigation>
+		<homePageURL>https://www.google.com/gmail/</homePageURL>
+		<inputMessagesPageURL>https://mail.google.com/mail/u/0/#inbox</inputMessagesPageURL>
+		<draftLettersURL>https://mail.google.com/mail/u/0/#drafts</draftLettersURL>
+	</pageNavigation>
+	<user>
+		<email>lab.test.sending@gmail.com</email>
+		<password>a1234567890a</password>
+	</user>
+	<message>
+		<to>dembitskyib@gmail.com</to>
+		<cc>dembitskyib@gmail.com</cc>
+		<bcc>dembitskyib@gmail.com</bcc>
+		<subject>Some subject</subject>
+		<text>Some message</text>
+	</message>
+</data>
