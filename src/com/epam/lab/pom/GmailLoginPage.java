@@ -1,42 +1,45 @@
-package com.epam.lab;
+package pom;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import pageElements.Button;
+import pageElements.CustomFieldDecorator;
+import pageElements.TextInput;
 
 public class GmailLoginPage {
 	private WebDriver driver;
 	private final String VALUE_ATTACHED_MESSAGE = "%s value attached";
 	private static final Logger logger = LogManager.getLogger(GmailHomePage.class);
 	@FindBy(xpath = "//input[@type = 'email']")
-	private WebElement emailInput;
+	private TextInput emailInput;
 	@FindBy(xpath = "//div[@id = 'identifierNext']//span")
-	private WebElement emailSubmit;
+	private Button emailSubmit;
 	@FindBy(name = "password")
-	private WebElement passwordInput;
+	private TextInput passwordInput;
 	@FindBy(css = "#passwordNext")
-	private WebElement passwordSubmit;
+	private Button passwordSubmit;
 
 	public GmailLoginPage(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(new CustomFieldDecorator(driver), this);
 		this.driver = driver;
 	}
 
-	public void typeEmailAndSubmit(String login) {
-		emailInput.sendKeys(login);
+	public void typeEmailAndSubmit(String login, int timeOut) {
+		emailInput.type(login);
 		logger.info(String.format(VALUE_ATTACHED_MESSAGE, "Email"));
-		emailSubmit.click();
+		emailSubmit.click(driver, timeOut);
 	}
 
-	public GmailHomePage typePasswordAndSubmit(String password) {
-		passwordInput.sendKeys(password);
+	public GmailHomePage typePasswordAndSubmit(String password, int timeOut) {
+		boolean isPasswordField = true;
+		boolean shouldClickWithJS = true;
+		passwordInput.type(password, isPasswordField);
 		logger.info(String.format(VALUE_ATTACHED_MESSAGE, "Password"));
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeScript("arguments[0].click();", passwordSubmit);
+		passwordSubmit.click(driver, timeOut, shouldClickWithJS);
 		return new GmailHomePage(driver);
 	}
 
